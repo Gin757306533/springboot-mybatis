@@ -9,4 +9,6 @@ import java.util.List;
 public interface AccountMapper {
     @Select("select * from account;")
     List<Account> findAll();
+
+    void add(Account account);
 }

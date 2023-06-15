@@ -15,4 +15,13 @@
 <!--    <select id="findAll" resultMap="BaseResultMap">-->
 <!--        select * from account-->
 <!--    </select>-->
+
+    <insert id="add" parameterType="Account">
+        insert into account(username, password, age, location, nick_name)
+            values
+                (
+                 #{username}, #{password}, #{age}, #{location}, #{nickName}
+                )
+
+    </insert>
 </mapper>
