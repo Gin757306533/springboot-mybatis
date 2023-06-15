@@ -4,7 +4,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
-@Mapper
+//@Mapper
 public interface AccountMapper {
     List<Account> findAll();
 }
