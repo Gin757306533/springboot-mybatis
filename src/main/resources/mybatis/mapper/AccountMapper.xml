@@ -12,7 +12,7 @@
         <result column="id" property="id"></result>
     </resultMap>
 
-    <select id="findAll" resultMap="BaseResultMap">
-        select * from account
-    </select>
+<!--    <select id="findAll" resultMap="BaseResultMap">-->
+<!--        select * from account-->
+<!--    </select>-->
 </mapper>
