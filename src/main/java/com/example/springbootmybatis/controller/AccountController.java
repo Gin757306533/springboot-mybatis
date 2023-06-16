@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -25,6 +26,13 @@ public class AccountController {
     @PostMapping
     public void addAccount(@RequestBody AccountDTO accountDTO) {
         accountService.addAccount(accountDTO);
+    }
+
+    @GetMapping("/findByPages")
+    public Object findByPages(
+            @RequestParam(required = false) Integer pageNum,
+            @RequestParam(required = false) Integer pageSize) {
+        return accountService.findByPages(pageNum, pageSize);
     }
 
 }

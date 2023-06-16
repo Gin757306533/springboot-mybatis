@@ -7,7 +7,7 @@ import java.util.List;
 
 //@Mapper
 public interface AccountMapper {
-    @Select("select * from account;")
+    @Select("select * from account")
     List<Account> findAll();
 
     void add(Account account);
