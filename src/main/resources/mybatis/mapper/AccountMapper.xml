@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.springbootmybatis.mapper.AccountMapper">
+    <resultMap id="BaseResultMap" type="Account">
+        <result column="username" property="username"></result>
+        <result column="password" property="password"></result>
+        <result column="nick_name" property="nickName"></result>
+        <result column="age" property="age"></result>
+        <result column="location" property="location"></result>
+        <result column="id" property="id"></result>
+    </resultMap>
+
+<!--    <select id="findAll" resultMap="BaseResultMap">-->
+<!--        select * from account-->
+<!--    </select>-->
+
+    <insert id="add" parameterType="Account">
+        insert into account(username, password, age, location, nick_name)
+            values
+                (
+                 #{username}, #{password}, #{age}, #{location}, #{nickName}
+                )
+
+    </insert>
+</mapper>
